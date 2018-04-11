@@ -1,11 +1,15 @@
 import React from 'react';
 
 
-export default function List(){
+export default function List(props){
+    const contacts = props.contacts.map((contact,index) => {
+        return (
+            <li key={index}>{contact}</li>
+        );
+    })
     return (
         <ul>
-            <li>TEST</li>
-            <li>TEST</li>
+            {contacts}
         </ul>
     );
 }
